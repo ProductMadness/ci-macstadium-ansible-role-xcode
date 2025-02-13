@@ -56,7 +56,7 @@
       when: xcode_major_version | int >= 9
 
     - name: Xcode 8 packages
-      include: xcode8_packages.yml
+      include_tasks: xcode8_packages.yml
       when: xcode_major_version | int == 8
   when: not xcode_installed or xcode_installed_version is version(xcode_target_version, '!=')
 
